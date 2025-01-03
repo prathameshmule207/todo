@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Todo = mongoose.model("Todo")
 router.get('/todos', async (req, res) => {
 	const todos = await Todo.find();
+	console.log(JSON.stringify({todos}, null, 2))
 	res.json(todos);
 });
 

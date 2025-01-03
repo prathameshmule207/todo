@@ -15,5 +15,5 @@ const TodoSchema = new Schema({
 		default: Date.now()
 	}
 });
-
-module.exports = mongoose.model("Todo", TodoSchema);
+const Todo = mongoose.model("Todo", TodoSchema)
+module.exports = Todo;
